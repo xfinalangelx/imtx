@@ -7,18 +7,17 @@ const Nav = () => {
   const location = useLocation()
 
   const links = [
-    { text: "Trade", to: "/" },
-    { text: "Earn", to: "/earn" },
-    { text: "Redeem", to: "/redeem" },
-    { text: "Dashboard", to: "/dashboard" },
-    { text: "Documentation", to: "/documentation" },
+    { text: "TRADE", to: "/" },
+    { text: "VAULT", to: "/vault" },
+    { text: "DASHBOARD", to: "/dashboard" },
+    { text: "BRIDGE", to: "/bridge" },
   ];
 
-  const activeClass = 'text-white bg-gray-900 border-b-2 border-[#CDFF00]'
+  const activeClass = 'text-[#CDFF00] bg-gray-900 border-b-2 border-[#CDFF00]'
   const inactiveClass = 'text-gray-300 hover:text-white hover:bg-gray-700'
 
   return (
-    <nav className="bg-[#17182c]">
+    <nav className="bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -55,7 +54,7 @@ const Nav = () => {
                   <Link
                     key={link.text}
                     to={link.to}
-                    className={`px-3 py-2 text-sm font-medium border-b2 border-[#CDFF00] ${
+                    className={` text-sm font-medium border-b2 border-[#CDFF00] ${
                       location.pathname === link.to
                         ? activeClass
                         : inactiveClass
@@ -91,27 +90,13 @@ const Nav = () => {
               </svg>
 
               {/* Wallet Button */}
-              <div className="ml-8 mt-2 relative flex items-center justify-end">
+              <div className="ml-8 relative flex items-center justify-end">
                 <div>
                   <button
                     type="button"
-                    class="text-white bg-gray-700 hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2 mb-2"
+                    class="bg-[#CDFF00] rounded-3xl p-2 font-semibold "
                   >
-                    <div className="h-6 w-6">
-                      <svg
-                        viewBox="0 0 24 24"
-                        focusable="false"
-                        class="chakra-icon css-pv6ryy"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M18 3C19.103 3 20 3.897 20 5V7C21.103 7 22 7.897 22 9V19C22 20.103 21.103 21 20 21H5C3.794 21 2 20.201 2 18V6C2 4.346 3.346 3 5 3H18ZM18 5H5C4.448 5 4 5.449 4 6C4 6.551 4.448 7 5 7H18V5ZM14 17H16V15H18V13H16V11H14V13H12V15H14V17Z"
-                          fill="currentColor"
-                        ></path>
-                      </svg>
-                    </div>
-                    <p className="ml-2">Connect Wallet</p>
+                    CONNECT WALLET
                   </button>
                 </div>
               </div>
