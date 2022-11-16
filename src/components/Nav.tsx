@@ -14,7 +14,7 @@ const Nav = () => {
   ];
 
   const activeClass = 'text-[#CDFF00] bg-gray-900 border-b-2 border-[#CDFF00]'
-  const inactiveClass = 'text-gray-300 hover:text-white hover:bg-gray-700'
+  const inactiveClass = 'text-gray-300 hover:text-[#CDFF00]'
 
   return (
     <nav className="bg-black">
